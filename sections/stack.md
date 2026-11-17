@@ -1,5 +1,11 @@
 ## 🧰 Tech Stack
 
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=py,cpp,c,ts,js,react,nextjs,tailwind,fastapi,django,supabase,mysql,pytorch,sklearn,git,githubactions,linux,playwright" alt="Technical stack" />
+</div>
+
+<br />
+
 | Domain | Tools |
 | :--- | :--- |
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white) ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) |
@@ -9,7 +15,6 @@
 | **Geospatial** | ![Earth Engine](https://img.shields.io/badge/Earth%20Engine-4285F4?style=for-the-badge&logo=googleearth&logoColor=white) ![Sentinel-2](https://img.shields.io/badge/Sentinel--2-1A6B54?style=for-the-badge&logo=esa&logoColor=white) |
 | **Tooling** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) |
 
----
-
----
-
+<div align="center">
+  <img src="assets/svg/circuit-grid.svg" alt="" width="100%" />
+</div>

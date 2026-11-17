@@ -19,19 +19,29 @@
  * deleting anything.
  */
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 6;
+const localMissing = [];
 
 const readme = readFileSync(resolve(root, 'README.md'), 'utf8');
 
 const images = [...readme.matchAll(/(?:src)="(https?:\/\/[^"]+)"/g)].map((m) => m[1]);
 const links = [...readme.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)].map((m) => m[1]);
 const targets = [...new Set([...images, ...links])];
+
+// Repo-relative images (assets/banner.jpg, assets/svg/*.svg) never leave GitHub,
+// so they can't rot — but a typo still renders as a broken image. Check them on
+// disk instead of over the network.
+const localImages = [
+  ...new Set(
+    [...readme.matchAll(/(?:src)="((?!https?:|data:|\/\/)[^"]+)"/g)].map((m) => m[1])
+  ),
+];
 
 async function probe(url) {
   const controller = new AbortController();
@@ -46,6 +56,11 @@ async function probe(url) {
     const type = res.headers.get('content-type') || '';
     const isImage = type.startsWith('image/');
     if (!res.ok) {
+      // The snake SVG only exists after .github/workflows/snake.yml has run
+      // once on main. A 404 before that is expected, not a dead badge.
+      if (res.status === 404 && url.includes('/output/snake.svg')) {
+        return { url, status: 'WARN', detail: 'snake not generated yet — run the snake workflow' };
+      }
       return { url, status: 'FAIL', detail: `HTTP ${res.status}` };
     }
     if (url.includes('shields.io') || /\.(svg|png|jpg|jpeg|gif|webp)(\?|$)/i.test(url)) {
@@ -63,7 +78,13 @@ async function probe(url) {
 }
 
 async function run() {
-  console.log(`Checking ${targets.length} remote targets in README.md\n`);
+  console.log(`Checking ${targets.length} remote targets and ${localImages.length} local images\n`);
+
+  for (const rel of localImages) {
+    const ok = existsSync(resolve(root, rel));
+    console.log(`${ok ? '✓' : '✗'} ${ok ? 'OK  ' : 'FAIL'} local file              ${rel}`);
+    if (!ok) localMissing.push(rel);
+  }
 
   const results = [];
   let cursor = 0;
@@ -87,9 +108,17 @@ async function run() {
     console.log(`${mark} ${r.status.padEnd(4)} ${r.detail.padEnd(22)} ${r.url.slice(0, 110)}`);
   }
 
-  console.log(`\n${counts.OK} ok · ${counts.WARN} warnings · ${counts.FAIL} failed`);
+  const localOk = localImages.length - localMissing.length;
+  console.log(
+    `\n${counts.OK} remote ok · ${counts.WARN} warnings · ${counts.FAIL} failed · ` +
+      `${localOk}/${localImages.length} local images present`
+  );
 
-  if (counts.FAIL > 0) {
+  if (localMissing.length) {
+    console.error(`\nMissing local images: ${localMissing.join(', ')}`);
+  }
+
+  if (counts.FAIL > 0 || localMissing.length > 0) {
     console.error('\nSome targets failed. If every request failed identically, your network');
     console.error('or CI runner is likely blocking egress rather than the badges being dead.');
     process.exit(1);

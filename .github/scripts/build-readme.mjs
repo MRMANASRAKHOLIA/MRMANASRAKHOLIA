@@ -68,6 +68,26 @@ function render() {
     problems.push(`unbalanced HTML tags: ${unbalanced.join(', ')}`);
   }
 
+  // Nav links are hand-written anchors to generated headings. Rename a section
+  // and every link to it silently dies, so resolve them the way GitHub does:
+  // strip emoji and punctuation, lowercase, spaces to hyphens. A stripped emoji
+  // leaves its space behind, which is why "## 🎯 About" anchors to "#-about".
+  const slug = (text) =>
+    text
+      .toLowerCase()
+      .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu, '')
+      .replace(/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g, '')
+      .replace(/\s/g, '-');
+
+  const headings = [...out.matchAll(/^#{1,3} (.+)$/gm)].map((m) => slug(m[1]));
+  const anchors = [...new Set([...out.matchAll(/<a href="#([^"]+)"/g)].map((m) => m[1]))];
+  const dangling = anchors.filter((a) => !headings.includes(a));
+  if (dangling.length) {
+    problems.push(
+      `nav anchors point at no heading: ${dangling.map((d) => `#${d}`).join(', ')}`
+    );
+  }
+
   return { out, used, problems };
 }
 
