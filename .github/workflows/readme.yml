@@ -1,0 +1,50 @@
+name: Profile README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'sections/**'
+      - 'docs/README.template.md'
+      - '.github/scripts/**'
+      - '.github/workflows/readme.yml'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'sections/**'
+      - 'docs/README.template.md'
+      - '.github/scripts/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Structure & links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build README from sections
+        run: node .github/scripts/build-readme.mjs
+
+      - name: Fail if README.md is out of date
+        run: |
+          if ! git diff --quiet README.md; then
+            echo "::error file=README.md::README.md is out of date. Run 'npm run readme' locally and commit the result."
+            git diff --stat README.md
+            exit 1
+          fi
+          echo "README.md is in sync with sections/"
+
+      - name: Check remote links and badges
+        # Badge providers intermittently rate-limit GitHub runners, so this is
+        # advisory rather than blocking — it surfaces dead URLs without flaking.
+        continue-on-error: true
+        run: node .github/scripts/check-links.mjs

@@ -1,0 +1,24 @@
+{
+  "name": "profile-readme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub profile README for Manas Rakholia — composed from modular section files",
+  "type": "module",
+  "scripts": {
+    "readme": "node .github/scripts/build-readme.mjs",
+    "readme:check": "node .github/scripts/build-readme.mjs --check",
+    "links": "node .github/scripts/check-links.mjs",
+    "verify": "npm run readme:check && npm run links",
+    "prepare": "node .github/scripts/build-readme.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "github-profile",
+    "profile-readme",
+    "quant",
+    "fintech"
+  ],
+  "license": "MIT"
+}

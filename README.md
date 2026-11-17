@@ -23,6 +23,16 @@
   <a href="#-connect"><b>Connect</b></a>
 </div>
 
+<div align="center">
+  <a href="#-about"><b>About</b></a> &nbsp;·&nbsp;
+  <a href="#-what-im-building"><b>Projects</b></a> &nbsp;·&nbsp;
+  <a href="#-selected-work"><b>Case Studies</b></a> &nbsp;·&nbsp;
+  <a href="#-tech-stack"><b>Stack</b></a> &nbsp;·&nbsp;
+  <a href="#-github-analytics"><b>Analytics</b></a> &nbsp;·&nbsp;
+  <a href="#-education"><b>Education</b></a> &nbsp;·&nbsp;
+  <a href="#-connect"><b>Connect</b></a>
+</div>
+
 ---
 
 ## 🎯 About
@@ -76,6 +86,8 @@ Principle    →  If it can't explain its reasoning, it isn't ready for producti
 </td>
 </tr>
 </table>
+
+---
 
 ---
 
@@ -162,6 +174,91 @@ Engineering depth plus business fluency — the lens I use to judge whether a mo
 
 ---
 
+---
+
+## 🔬 Selected Work
+
+Three systems where the interesting problem wasn't the model — it was making the output **trustworthy**.
+
+<br />
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<b>🛰️ DharaWatch</b><br />
+<sub><b>Reconciling ground truth with satellite truth</b></sub>
+
+<br />
+
+**The problem.** Field observations and satellite readings frequently disagree. An officer photographs a restored pond; the spectral index says bare soil. Whichever one you trust blindly, you are wrong some of the time.
+
+**The approach.** Every photo is hashed (SHA-256), stripped for EXIF GPS and timestamp, then matched against a satellite composite for the same footprint — NDVI, NDWI, NDMI and NDBI computed over cloud-free median imagery. The system then scores **field ↔ satellite agreement** and emits an immutable *Evidence Passport* carrying the full provenance chain. Watershed context resolves through HydroBASINS.
+
+**Why it matters.** Disagreement becomes a signal, not a bug. A low agreement score flags a site for review rather than silently selecting one source.
+
+<sub>Earth Engine &middot; Sentinel-2 MSI &middot; HydroBASINS &middot; Express &middot; React &middot; Gemini</sub>
+
+</td>
+<td width="50%" valign="top">
+
+<b>🛡️ Scam Radar</b><br />
+<sub><b>Refusing to ship a black box</b></sub>
+
+<br />
+
+**The problem.** Fraud classifiers output a probability. A probability is useless to a person deciding whether to pay a registration fee — they need the *reason*.
+
+**The approach.** TF-IDF plus logistic regression gives an interpretable baseline whose coefficients map cleanly onto language features. The API returns a graded risk band (Low / Medium / High) **and** the extracted triggers behind it — payment or UPI mentions, manufactured urgency, pressure to move to Telegram or WhatsApp.
+
+**Why it matters.** Explainability here is an architectural constraint, not a reporting afterthought. The response schema is designed so a reason can never be omitted.
+
+<sub>FastAPI &middot; scikit-learn &middot; TF-IDF &middot; Pydantic &middot; Python</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<b>📅 Ahmedabad Tech Events</b><br />
+<sub><b>Ingestion that survives the web changing</b></sub>
+
+<br />
+
+**The problem.** Event data is scattered across GDG chapters, university pages, startup calendars, TEDx sites and community boards — every source with different markup, and every one free to change it.
+
+**The approach.** One scraper adapter per source behind a shared interface, so a broken site is an isolated failure rather than an outage. Playwright handles JavaScript-rendered pages. A GitHub Actions cron runs the full sweep every 30 minutes, writing through Supabase, with an admin review layer for moderation.
+
+**Why it matters.** Treating scraping as a data-engineering problem — adapters, idempotent writes, scheduled runs — is what makes it a platform rather than a script.
+
+<sub>Next.js 16 &middot; TypeScript &middot; Playwright &middot; Supabase &middot; GitHub Actions</sub>
+
+</td>
+<td width="50%" valign="top">
+
+<b>👁️ DrishtiWatch</b><br />
+<sub><b>Temporal comparison as a first-class feature</b></sub>
+
+<br />
+
+**The problem.** A single satellite image tells you what a place looks like. It does not tell you what changed — which is usually the actual question.
+
+**The approach.** Users drag two independent timeline handles across 2019–2026 to define any date range; the backend builds cloud-free median composites for each endpoint and computes real spectral deltas. Split, difference and flicker view modes let the eye catch change the numbers might understate.
+
+**Why it matters.** Grounding the comparison in genuine Sentinel-2 reflectance — rather than pre-rendered tiles — means the deltas are measurements, not illustrations.
+
+<sub>Earth Engine &middot; Sentinel-2 &middot; NDVI &middot; NDWI &middot; Express &middot; Vite</sub>
+
+</td>
+</tr>
+</table>
+
+<br />
+
+> **A note on scale.** These are student-built systems with real data pipelines, real credentials and real failure modes — including a Netlify deployment path for DharaWatch. They are not demos that only run on the author's machine.
+
+---
+
 ## 🧰 Tech Stack
 
 | Domain | Tools |
@@ -175,16 +272,36 @@ Engineering depth plus business fluency — the lens I use to judge whether a mo
 
 ---
 
+---
+
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=MRMANASRAKHOLIA&show_icons=true&include_all_commits=true&count_private=true&hide_rank=false&rank_icon=github&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=2DD4BF&icon_color=6366F1&text_color=C9D1D9" alt="GitHub statistics" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=MRMANASRAKHOLIA&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=2DD4BF&icon_color=6366F1&text_color=C9D1D9" alt="GitHub statistics" />
   <img width="51%" src="https://streak-stats.demolab.com?user=MRMANASRAKHOLIA&theme=tokyonight&hide_border=true&background=00000000&ring=2DD4BF&fire=6366F1&currStreakLabel=2DD4BF&sideLabels=C9D1D9&dates=6E7681" alt="Contribution streak" />
+</div>
+
+<div align="center">
+  <img width="99%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MRMANASRAKHOLIA&theme=tokyonight" alt="Profile summary — contributions, stars and activity" />
 </div>
 
 <div align="center">
   <img width="42%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MRMANASRAKHOLIA&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9" alt="Most used languages" />
   <img width="56%" src="https://github-readme-activity-graph.vercel.app/graph?username=MRMANASRAKHOLIA&bg_color=00000000&color=2DD4BF&line=6366F1&point=2DD4BF&area=true&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution activity graph" />
+</div>
+
+<br />
+
+<div align="center">
+
+<b>📈 Snapshot</b>
+
+| Total contributions | Repositories | Languages | Contribution years |
+| :---: | :---: | :---: | :---: |
+| **21+** | **8** | **TypeScript · Python · JS** | **2025 – 2026** |
+
+<sub>Tracking metrics that hold up at this stage — not a scoreboard built to flatter a decade of history.</sub>
+
 </div>
 
 ---
@@ -215,6 +332,8 @@ Institute of Technology & Institute of Management
 </td>
 </tr>
 </table>
+
+---
 
 ---
 
