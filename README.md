@@ -1,10 +1,20 @@
 <div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2DD4BF,100:6366F1&height=110&section=header" alt="" width="100%" />
+</div>
+
+<div align="center">
   <img src="assets/banner.jpg" alt="Manas Rakholia — Financial Intelligence, Quant, FinTech, AI" width="100%" />
+</div>
+
+<div align="center">
+  <img src="assets/svg/aurora-band.svg" alt="" width="100%" />
 </div>
 
 <div align="center">
   <br />
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=2DD4BF&center=true&vCenter=true&width=760&height=45&lines=Building+at+the+intersection+of+Finance%2C+Data+%26+AI;Quant+%E2%80%A2+FinTech+%E2%80%A2+Machine+Learning+%E2%80%A2+Analytics;Integrated+B.Tech+CSE+%2B+MBA+%E2%80%94+Nirma+University+%2730;Turning+noisy+real-world+data+into+decisions" alt="What I am building" />
+  <br />
+  <img src="assets/svg/ticker.svg" alt="Focus areas" width="100%" />
 </div>
 
 <div align="center">
@@ -12,15 +22,6 @@
   <a href="https://github.com/MRMANASRAKHOLIA"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://instagram.com/ynk.mns"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   <img src="https://komarev.com/ghpvc/?username=MRMANASRAKHOLIA&style=for-the-badge&color=2DD4BF&label=PROFILE+VIEWS" alt="Profile views" />
-</div>
-
-<div align="center">
-  <a href="#-about"><b>About</b></a> &nbsp;·&nbsp;
-  <a href="#-what-im-building"><b>Work</b></a> &nbsp;·&nbsp;
-  <a href="#-tech-stack"><b>Stack</b></a> &nbsp;·&nbsp;
-  <a href="#-github-analytics"><b>Analytics</b></a> &nbsp;·&nbsp;
-  <a href="#-education"><b>Education</b></a> &nbsp;·&nbsp;
-  <a href="#-connect"><b>Connect</b></a>
 </div>
 
 <div align="center">
@@ -261,6 +262,12 @@ Three systems where the interesting problem wasn't the model — it was making t
 
 ## 🧰 Tech Stack
 
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=py,cpp,c,ts,js,react,nextjs,tailwind,fastapi,django,supabase,mysql,pytorch,sklearn,git,githubactions,linux,playwright" alt="Technical stack" />
+</div>
+
+<br />
+
 | Domain | Tools |
 | :--- | :--- |
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white) ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) |
@@ -270,24 +277,40 @@ Three systems where the interesting problem wasn't the model — it was making t
 | **Geospatial** | ![Earth Engine](https://img.shields.io/badge/Earth%20Engine-4285F4?style=for-the-badge&logo=googleearth&logoColor=white) ![Sentinel-2](https://img.shields.io/badge/Sentinel--2-1A6B54?style=for-the-badge&logo=esa&logoColor=white) |
 | **Tooling** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) |
 
----
-
----
+<div align="center">
+  <img src="assets/svg/circuit-grid.svg" alt="" width="100%" />
+</div>
 
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=MRMANASRAKHOLIA&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=2DD4BF&icon_color=6366F1&text_color=C9D1D9" alt="GitHub statistics" />
-  <img width="51%" src="https://streak-stats.demolab.com?user=MRMANASRAKHOLIA&theme=tokyonight&hide_border=true&background=00000000&ring=2DD4BF&fire=6366F1&currStreakLabel=2DD4BF&sideLabels=C9D1D9&dates=6E7681" alt="Contribution streak" />
+  <img width="48%" src="https://github-stats-extended.vercel.app/api?username=MRMANASRAKHOLIA&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&hide_border=true&bg_color=00000000&title_color=2DD4BF&icon_color=6366F1&text_color=C9D1D9&card_width=420" alt="GitHub statistics" />
+  <img width="51%" src="https://streak-stats.demolab.com?user=MRMANASRAKHOLIA&hide_border=true&background=00000000&ring=2DD4BF&fire=6366F1&currStreakLabel=2DD4BF&sideLabels=C9D1D9&dates=6E7681&stroke=1E293B&currStreakNum=C9D1D9&sideNums=C9D1D9" alt="Contribution streak" />
 </div>
 
 <div align="center">
-  <img width="99%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MRMANASRAKHOLIA&theme=tokyonight" alt="Profile summary — contributions, stars and activity" />
+  <img width="42%" src="https://github-stats-extended.vercel.app/api/top-langs?username=MRMANASRAKHOLIA&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9&card_width=380" alt="Most used languages" />
+  <img width="56%" src="https://github-readme-activity-graph.vercel.app/graph?username=MRMANASRAKHOLIA&bg_color=00000000&color=2DD4BF&line=6366F1&point=5EEAD4&area=true&area_color=6366F1&hide_border=true&title_color=2DD4BF&custom_title=Contribution%20Activity" alt="Contribution activity graph" />
 </div>
 
 <div align="center">
-  <img width="42%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MRMANASRAKHOLIA&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9" alt="Most used languages" />
-  <img width="56%" src="https://github-readme-activity-graph.vercel.app/graph?username=MRMANASRAKHOLIA&bg_color=00000000&color=2DD4BF&line=6366F1&point=2DD4BF&area=true&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution activity graph" />
+  <img width="99%" src="https://ghchart.rshah.org/2DD4BF/MRMANASRAKHOLIA" alt="Contribution graph" />
+</div>
+
+<!-- Rendered onto the `output` branch by .github/workflows/snake.yml -->
+<div align="center">
+  <img width="99%" src="https://raw.githubusercontent.com/MRMANASRAKHOLIA/MRMANASRAKHOLIA/output/snake.svg" alt="Contribution snake animation" />
+</div>
+
+<br />
+
+### 📌 Pinned
+
+<div align="center">
+  <a href="https://github.com/MRMANASRAKHOLIA/ahmedabad-tech-events-live"><img width="49%" src="https://github-stats-extended.vercel.app/api/pin?username=MRMANASRAKHOLIA&repo=ahmedabad-tech-events-live&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9&icon_color=6366F1" alt="Ahmedabad Tech Events" /></a>
+  <a href="https://github.com/MRMANASRAKHOLIA/AI-based-Fake-Job-Scam-Detector-India-Focused-Explainable-NLP-System-"><img width="49%" src="https://github-stats-extended.vercel.app/api/pin?username=MRMANASRAKHOLIA&repo=AI-based-Fake-Job-Scam-Detector-India-Focused-Explainable-NLP-System-&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9&icon_color=6366F1" alt="Explainable job-scam detector" /></a>
+  <a href="https://github.com/MRMANASRAKHOLIA/LeetCode"><img width="49%" src="https://github-stats-extended.vercel.app/api/pin?username=MRMANASRAKHOLIA&repo=LeetCode&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9&icon_color=6366F1" alt="Quant and DSA track" /></a>
+  <a href="https://github.com/Pearlin-Tech/DHARAWATCH"><img width="49%" src="https://github-stats-extended.vercel.app/api/pin?username=Pearlin-Tech&repo=DHARAWATCH&hide_border=true&bg_color=00000000&title_color=2DD4BF&text_color=C9D1D9&icon_color=6366F1" alt="DharaWatch" /></a>
 </div>
 
 <br />
@@ -296,15 +319,17 @@ Three systems where the interesting problem wasn't the model — it was making t
 
 <b>📈 Snapshot</b>
 
-| Total contributions | Repositories | Languages | Contribution years |
+| Contributions · 2026 | Public repos | Languages | Building since |
 | :---: | :---: | :---: | :---: |
-| **21+** | **8** | **TypeScript · Python · JS** | **2025 – 2026** |
+| **33** | **8** | **TypeScript · Python · JS** | **2025** |
 
-<sub>Tracking metrics that hold up at this stage — not a scoreboard built to flatter a decade of history.</sub>
+<sub>Small numbers, real pipelines. Every figure here is pulled from the GitHub API, not inflated.</sub>
 
 </div>
 
----
+<div align="center">
+  <img src="assets/svg/divider.svg" alt="" width="100%" />
+</div>
 
 ## 🎓 Education
 
@@ -340,17 +365,27 @@ Institute of Technology & Institute of Management
 ## 🤝 Connect
 
 <div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=1200&color=2DD4BF&center=true&vCenter=true&width=640&height=40&lines=Let+us+build+something+that+matters;Finance+x+Data+x+AI;Open+to+FinTech+%2B+Quant+%2B+AI+collaborations" alt="What I am open to" />
+</div>
+
+<div align="center">
 
 **Open to collaborations in FinTech, Quant, AI/ML, and data-driven products.**
 
 <a href="mailto:rakholiamanas7@gmail.com"><img src="https://img.shields.io/badge/Let's%20talk-rakholiamanas7%40gmail.com-2DD4BF?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://github.com/MRMANASRAKHOLIA"><img src="https://img.shields.io/badge/Follow-MRMANASRAKHOLIA-6366F1?style=for-the-badge&logo=github&logoColor=white" alt="Follow on GitHub" /></a>
 
 <br /><br />
 
 <sub>⚡ Dual-track CSE + MBA — where engineering rigor meets market intuition.</sub>
 
+<br /><br />
+
+<img src="assets/svg/divider.svg" alt="" width="100%" />
+
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2DD4BF,100:6366F1&height=110&section=footer" alt="" width="100%" />
+  <img src="assets/svg/signal-bars.svg" alt="" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6366F1,100:2DD4BF&height=110&section=footer" alt="" width="100%" />
 </div>
