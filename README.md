@@ -86,11 +86,11 @@ Principle    →  If it can't explain its reasoning, it isn't ready for producti
 <td width="33%" valign="top">
 
 <b>🛰️ DharaWatch</b><br />
-<sub><b>Watershed & satellite intelligence</b></sub>
+<sub><b>Watershed &amp; satellite intelligence</b></sub>
 
 Turns Sentinel-2 spectral data and terrain context into watershed health signals — water flow, environmental change, and intervention evidence.
 
-<sub>`Earth Engine` `Node.js` `Gemini`</sub>
+<sub>Earth Engine &middot; Node.js &middot; Gemini</sub>
 
 **[→ Repository](https://github.com/Pearlin-Tech/DHARAWATCH)**
 
@@ -102,7 +102,7 @@ Turns Sentinel-2 spectral data and terrain context into watershed health signals
 
 Satellite temporal comparison plus field observations, unified into one analytical layer for administrators and planners.
 
-<sub>`Express` `Sentinel-2` `Vite`</sub>
+<sub>Express &middot; Sentinel-2 &middot; Vite</sub>
 
 **[→ Repository](https://github.com/Pearlin-Tech/DRISHTIWATCH)**
 
@@ -114,7 +114,7 @@ Satellite temporal comparison plus field observations, unified into one analytic
 
 NLP pipeline that scores fake-job and payment-scam messages — built to show *why* a message is risky, not just a black-box number.
 
-<sub>`FastAPI` `scikit-learn` `TF-IDF`</sub>
+<sub>FastAPI &middot; scikit-learn &middot; TF-IDF</sub>
 
 **[→ Repository](https://github.com/MRMANASRAKHOLIA/AI-based-Fake-Job-Scam-Detector-India-Focused-Explainable-NLP-System-)**
 
@@ -128,7 +128,7 @@ NLP pipeline that scores fake-job and payment-scam messages — built to show *w
 
 Next.js platform collecting regional tech events through scheduled multi-source scrapers, with search, filtering, and admin review.
 
-<sub>`Next.js 16` `TypeScript` `Supabase` `Playwright`</sub>
+<sub>Next.js 16 &middot; TypeScript &middot; Supabase &middot; Playwright</sub>
 
 **[→ Repository](https://github.com/MRMANASRAKHOLIA/ahmedabad-tech-events-live)**
 
@@ -140,7 +140,7 @@ Next.js platform collecting regional tech events through scheduled multi-source 
 
 A public record of algorithmic problem solving and quantitative finance groundwork — the reps behind the systems above.
 
-<sub>`C++` `Python` `Algorithms`</sub>
+<sub>C++ &middot; Python &middot; Algorithms</sub>
 
 **[→ Repository](https://github.com/MRMANASRAKHOLIA/LeetCode)**
 
@@ -152,7 +152,7 @@ A public record of algorithmic problem solving and quantitative finance groundwo
 
 Engineering depth plus business fluency — the lens I use to judge whether a model is useful, not just accurate.
 
-<sub>`Technology` `Strategy` `Markets`</sub>
+<sub>Technology &middot; Strategy &middot; Markets</sub>
 
 **Nirma University '30**
 
@@ -206,7 +206,7 @@ Institute of Technology & Institute of Management
 <td width="50%" valign="top">
 
 <b>📚 Self-directed</b><br />
-<sub><b>Quant · Data · Systems</b></sub>
+<sub><b>Quant &middot; Data &middot; Systems</b></sub>
 
 - Quantitative finance & probability foundations
 - Data structures, algorithms, C++ depth
