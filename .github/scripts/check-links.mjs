@@ -19,7 +19,7 @@
  * deleting anything.
  */
 
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -113,6 +113,34 @@ async function run() {
     `\n${counts.OK} remote ok · ${counts.WARN} warnings · ${counts.FAIL} failed · ` +
       `${localOk}/${localImages.length} local images present`
   );
+
+  // This step runs with continue-on-error so rate limits can't flake the build,
+  // which also means a real failure scrolls past unnoticed. Write the result to
+  // the job summary so it stays visible on the run page.
+  const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+  if (summaryPath) {
+    const shown = results.filter((r) => r.status !== 'OK').slice(0, 25);
+    const rows = shown.length
+      ? [
+          '| Status | Detail | URL |',
+          '| :--- | :--- | :--- |',
+          ...shown.map((r) => `| ${r.status} | ${r.detail} | ${r.url.slice(0, 100)} |`),
+        ].join('\n')
+      : '_Every remote target resolved._';
+    const body = [
+      '### Badge & link check',
+      '',
+      `**${counts.OK}** ok · **${counts.WARN}** warnings · **${counts.FAIL}** failed · ` +
+        `**${localOk}/${localImages.length}** local images present`,
+      '',
+      rows,
+      '',
+      counts.FAIL > 0 || localMissing.length > 0
+        ? '> ⚠️ This check is advisory. Confirm the failures are real before deleting anything — badge hosts rate-limit CI runners.'
+        : '',
+    ].join('\n');
+    writeFileSync(summaryPath, body, { flag: 'a' });
+  }
 
   if (localMissing.length) {
     console.error(`\nMissing local images: ${localMissing.join(', ')}`);
